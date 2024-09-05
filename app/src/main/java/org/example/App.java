@@ -3,12 +3,15 @@
  */
 package org.example;
 
+import org.example.socket.BaseSocketApiBasedServer;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+//        System.out.println(new App().getGreeting());
+        new BaseSocketApiBasedServer().start(9080);
     }
 }
